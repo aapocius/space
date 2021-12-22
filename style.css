@@ -1,0 +1,85 @@
+body{
+  background: url(https://www.pngall.com/wp-content/uploads/2016/07/Space.png) no-repeat center center;
+   background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+#delay_demo {
+  position:relative;
+  width: 150vw;
+  height: 150vh;
+  margin:0 auto;
+  padding: 5%;
+}
+#dd_main {
+  width: 300px;
+  height: 300px;
+  position:absolute;
+  
+  top: 30vh;
+  left: 35vw;
+  border-radius: 100px;
+  
+  transition: all 2s ease-in-out;
+  background: url(https://freesvg.org/img/3d-Earth-Globe.png) no-repeat;
+  background-size: 70% 70%;
+  
+}
+#dd_main {
+  animation-name: cloud;
+  animation-duration: 12s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1; 
+  animation-direction: normal;
+  animation-delay: 0s;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+}
+
+@keyframes cloud {
+
+  200% {
+    opacity: 0;
+    left: -100px;
+  }
+  
+  200% {
+    opacity: 1;
+  }
+  
+  200% {
+    opacity: 1;
+    left: 100px;
+  }
+  
+  0% {
+    opacity: 0;
+    left: 500px;
+  }
+
+}
+
+#delay_demo .center {
+  width: 100vw;
+  position: absolute;
+  bottom:30px;
+}
+#dd1, #dd2, #dd3, #dd4, #dd5, #dd6, #dd7, #dd8 {
+  width: 30px;
+  height: 30px;
+  border-radius: 20%;
+  position:absolute;
+  top: 43vh;
+  left: 43vw;
+  background: url(rocketg.svg) no-repeat;
+  transition: all 2s ease-in-out; 
+  transform: translate3d(0,0,0);
+}
+  #dd1 {transition-delay: 0.3s;}
+
+
+
+#delay_demo:hover #dd1, #delay_demo.hover_effect #dd1 {
+  transform: translate(-250px,-200px);
+}
